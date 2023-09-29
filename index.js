@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const connectDB = require("./connectDB");
 const compression = require('compression');
+const cors = require("cors");
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
@@ -20,6 +21,7 @@ app.use(express.urlencoded( {extended: true} ));
 
 // middleware
 app.use(express.json());
+app.use(cors({origin: `${process.env.CLIENT_URL}`, credentials: true}));
 
 // Copression
 app.use(compression());

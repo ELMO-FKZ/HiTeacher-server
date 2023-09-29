@@ -1,15 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const cors = require("cors");
-const { addAttendance, updateAttendance, deleteAttendanceDayClass, deleteAttendanceClass, clearAttendance } = require("../controllers/attendanceController")
-
-// middleware
-router.use(
-    cors({
-        origin: "http://localhost:5173",
-        credentials: true,
-    })
-);
+const { addAttendance, updateAttendance, deleteAttendanceDayClass, deleteAttendanceClass, clearAttendance } = require("../controllers/attendanceController");
 
 // Add attendance 
 // POST /api/classes/:name/students/attendance

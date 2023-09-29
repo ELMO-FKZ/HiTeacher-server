@@ -1,15 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const cors = require("cors");
-const { loginUser, registerUser } = require("../controllers/authController")
-
-// middleware
-router.use(
-    cors({
-        origin: "http://localhost:5173",
-        credentials: true,
-    })
-);
+const { loginUser, registerUser } = require("../controllers/authController");
 
 // Register 
 // POST /api/register

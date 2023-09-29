@@ -1,15 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const cors = require("cors");
-const { getStudents, getClassStudents, getStudent, deleteStudent, updateStudent, addStudent } = require("../controllers/studentController")
-
-// middleware
-router.use(
-    cors({
-        origin: "http://localhost:5173",
-        credentials: true,
-    })
-);
+const { getStudents, getClassStudents, getStudent, deleteStudent, updateStudent, addStudent } = require("../controllers/studentController");
 
 // Get all students
 // GET /api/classes/students
