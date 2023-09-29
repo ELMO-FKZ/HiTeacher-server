@@ -21,7 +21,7 @@ app.use(express.urlencoded( {extended: true} ));
 
 // middleware
 app.use(express.json());
-app.use(cors({origin: `${process.env.CLIENT_URL}`, credentials: true}));
+app.use(cors({origin: 'https://classroom-kolz.onrender.com', credentials: true}));
 
 // Copression
 app.use(compression());
